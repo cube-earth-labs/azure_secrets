@@ -18,3 +18,20 @@ variable "AZURE_TENANT_ID" {
   type        = string
   description = "The Azure Tenant ID"
 }
+
+variable "arm_subscription_id" {
+  type        = string
+  description = "The Azure Subscription ID"
+}
+variable "arm_tenant_id" {
+  type        = string
+  description = "The Azure Tenant ID"
+}
+variable "arm_client_id" {
+  type        = string
+  description = "The Azure Client ID"
+}
+variable "arm_client_secret" {
+  type        = string
+  description = "The Azure Client Secret"
+}
