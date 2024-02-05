@@ -32,3 +32,7 @@ resource "azurerm_key_vault" "kv" {
     ]
   }
 }
+
+output "akv_uri" {
+  value = azurerm_key_vault.kv.vault_uri
+}
