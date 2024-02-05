@@ -37,6 +37,6 @@ data "vault_azure_access_credentials" "creds" {
   backend                     = "azure"
   validate_creds              = true
   num_sequential_successes    = 30
-  num_seconds_between_tests   = 2
+  num_seconds_between_tests   = 30
   max_cred_validation_seconds = 1200
 }
