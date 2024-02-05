@@ -24,12 +24,9 @@ provider "vault" {}
 
 provider "azurerm" {
   features {}
-  client_id                  = data.vault_azure_access_credentials.creds.client_id
-  client_secret              = data.vault_azure_access_credentials.creds.client_secret
-  subscription_id            = var.azure_subscription_id
-  tenant_id                  = var.azure_tenant_id
-  environment                = "public"
-  skip_provider_registration = "true"
+  client_id     = data.vault_azure_access_credentials.creds.client_id
+  client_secret = data.vault_azure_access_credentials.creds.client_secret
+  # skip_provider_registration = "true"
 }
 
 data "vault_azure_access_credentials" "creds" {
