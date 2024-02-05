@@ -34,6 +34,24 @@ resource "azurerm_key_vault_access_policy" "me" {
   ]
 }
 
+resource "azurerm_key_vault_access_policy" "eric" {
+  key_vault_id = azurerm_key_vault.kv.id
+  tenant_id    = "16a4bfe1-aa7a-48bc-9b4d-2e03f2644e7a"
+  object_id    = "6156e3f6-7cec-41af-bc3c-858a155cfe8f"
+
+  key_permissions = [
+    "Get", "List", "Update", "Create", "Import", "Delete", "Recover", "Backup", "Restore", "Decrypt", "Encrypt", "UnwrapKey", "WrapKey", "Verify", "Sign", "Purge", "Release", "Rotate", "GetRotationPolicy", "SetRotationPolicy"
+  ]
+
+  secret_permissions = [
+    "Get", "List", "Set", "Delete", "Recover", "Backup", "Restore", "Purge"
+  ]
+
+  storage_permissions = [
+    "Backup", "Delete", "DeleteSAS", "Get", "GetSAS", "List", "ListSAS", "Purge", "Recover", "RegenerateKey", "Restore", "Set", "Update", "SetSAS"
+  ]
+}
+
 resource "azurerm_key_vault_access_policy" "vault" {
   key_vault_id = azurerm_key_vault.kv.id
   tenant_id    = "16a4bfe1-aa7a-48bc-9b4d-2e03f2644e7a"
