@@ -1,3 +1,3 @@
-# Vault Configuration
+# Azure Key Vault
 
-This repositroy contains the configuration for the Cube Earth Labs HCP Vault Namespace.
+This repository contains the configuration for the Cube Earth Labs Azure Key Vault.
